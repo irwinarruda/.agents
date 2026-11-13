@@ -1,0 +1,43 @@
+{
+  "judges": [
+    {
+      "id": "opus",
+      "label": "Claude Opus 5.5 xHigh (Personal Claude)",
+      "weight": 3,
+      "target": {
+        "providerInstanceId": "claudeAgent",
+        "model": "claude-opus-5-5",
+        "options": {
+          "effort": "xhigh"
+        }
+      }
+    },
+    {
+      "id": "luna",
+      "label": "ChatGPT Luna 6 xHigh (Codex)",
+      "weight": 1,
+      "target": {
+        "providerInstanceId": "codex",
+        "model": "gpt-6-luna",
+        "options": {
+          "reasoningEffort": "xhigh"
+        }
+      }
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini 3.8 Flash High (Antigravity)",
+      "weight": 2,
+      "images": "attachments",
+      "target": {
+        "providerInstanceId": "antigravity",
+        "model": "gemini-3.8-flash-high",
+        "options": {}
+      },
+      "runtimeMode": "auto-accept-edits"
+    }
+  ],
+  "criteria": {
+    "uiux": "One grade for UI and UX together. Visual design: hierarchy, typography, spacing and alignment, color and contrast, consistency between screens, polish of details (icons, borders, shadows, empty space). Experience: how obvious the purpose and next action are, navigation and wayfinding, information density, feedback and states (loading, empty, error, success), form and interaction friction, accessibility signals (contrast, target size, labels), and how both hold up on mobile."
+  }
+}

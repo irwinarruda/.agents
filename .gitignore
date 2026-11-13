@@ -1,0 +1,22 @@
+# Local agent state
+.skill-lock.json
+
+# Private runtime data
+skills/irwin-style/data/personality.md
+
+# Generated files
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+*.skill
+skills/*-workspace/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+.trash
+synced

@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "command": "pnpm dev:mock",
+    "url": "http://localhost:5173",
+    "readyTimeoutSeconds": 120
+  },
+  "viewports": [
+    { "name": "desktop", "width": 1440, "height": 900 },
+    { "name": "mobile", "width": 390, "height": 844, "pages": "key" }
+  ],
+  "pages": [
+    { "module": "dashboard", "name": "overview", "path": "/", "key": true },
+    {
+      "module": "settings",
+      "name": "edit-profile-dialog",
+      "path": "/settings",
+      "steps": [
+        { "action": "click", "selector": "text=Edit profile" },
+        { "action": "waitFor", "selector": "[role=dialog]" }
+      ]
+    }
+  ],
+  "references": [
+    { "name": "linear", "url": "https://linear.app", "notes": "Dense but calm. Keyboard-first. Typography does the hierarchy." },
+    { "name": "some-app-from-screenshots", "notes": "Drop PNGs into .ui-council/references/some-app-from-screenshots/" }
+  ],
+  "goal": {
+    "threshold": 9,
+    "maxRounds": 8
+  }
+}
